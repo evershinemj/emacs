@@ -38,15 +38,15 @@
 ;; (global-set-key "\C-x\C-a" 'beginning-of-buffer)
 ;; (global-set-key "\C-x\C-e" 'end-of-buffer)		
 ;; use visible bell instead of audible bell to indicate errors
-(setq visible-bell t)
 ;; (tool-bar-mode nil)
+(setq visible-bell t)
+(setq track-eol t)
 
 (global-set-key (kbd "C-x <RET> r") 'recover-this-file)
-
 (global-set-key (kbd "C-j") 'goto-line)
-(define-key text-mode-map (kbd "C-j") 'auto-complete-mode)
 (global-set-key (kbd "C-/") 'undo)
-(setq track-eol t)
+
+(define-key text-mode-map (kbd "C-j") 'auto-complete-mode)
 
 ;; (setq-default auto-fill-function 'do-auto-fill)
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -59,10 +59,8 @@
 (put 'scroll-right 'disabled nil)
 
 (setq initial-frame-alist '((width . 100) (height . 100)))
-
 (setq column-number-mode t)
 (setq line-number-mode t)
-
 ;; typo!
 ;; (setq inhibit-startup-messate t)
 (setq inhibit-startup-message t)
@@ -80,7 +78,6 @@
 (global-set-key [f9] 'other-window)
 (global-set-key [f11] 'compile)
 (global-set-key [f12] 'gdb)
-
 (global-set-key "\C-c\C-s" 'eshell)
 (global-set-key "\C-c\C-v" 'view-mode)
 (global-set-key "\C-c\C-e" 'evil-mode)
@@ -116,7 +113,6 @@
 
 ;; setq for set quote
 (setq user-name "wangxueming")
-
 ;; (setq frame-title-format '("Emacs@"system-name":%b %+%+ %f"))
 (setq frame-title-format "EMACS@%b FILE PATH: %f")
 (set-foreground-color "green")
@@ -129,7 +125,6 @@
 (setq default-cursor-type 'bar)
 (setq default-tab-width 4)
 (setq tab-width 4)
-
 (setq make-backup-files nil)
 ;; (add-to-list 'load-path "~/.emacs.d/elpa/evil-20190222.1212/")
 ;; (load 'evil)
